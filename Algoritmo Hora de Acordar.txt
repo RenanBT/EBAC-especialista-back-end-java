@@ -1,0 +1,40 @@
+
+
+ 1- Abrir os olhos
+ 2 - Remover as cobertar
+ 3 - ir até o banheiro
+ 4 - lavar o rosto
+ 5 - secar o rosto
+ 6 - ir até a cozinha
+ 7 - se café pronto :  pular para passo 9
+						
+						 
+ 8 - se não:
+			- medir 500ml de água
+			- colocar água em uma chaleira
+			- colocar chaleira no fogão
+			- acender boca do fogão na qual a chaleira foi colocada									
+			- medir 100g de pó de café
+			- pegar garrafa térmica e posicionar na pia
+			- pegar suporte para coador de café
+			- pegar coador de café 
+			- inserir coador de café 
+			- inserir 100g de pó de café no coador 
+			- se água =! fervendo : 
+						- aguardar água ferver.		
+			- se água fervendo :
+													- colocar água no coador de café 
+													- aguardar toda a água passar pelo coador
+													- fechar garrafa térmica 
+ 
+ 9 - colocar xíxara sob a garrafa térmica
+10 - colocar café na xícara
+11 - tomar café 
+12 - ir até o banheiro
+13 - escovar os dentes 
+14 - pentear os cabelos 
+15 - ir até o quarto
+16 - tirar pijamas
+17 - colocar roupa de trabalho
+18 - trancar todas as portas e janelas da casa 
+19 - sair para o trabalho. 		
