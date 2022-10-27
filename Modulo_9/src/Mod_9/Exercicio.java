@@ -11,12 +11,15 @@ public class Exercicio {
 
         Scanner scan = new Scanner(System.in);
         System.out.println("Digite um numero inteiro:");
-        Integer num = scan.nextInt();
+        int num = scan.nextInt();
 
         System.out.println("Valor digitado: " + num);
 
-        int num2 = Integer.valueOf(num);
-        System.out.println("Unboxing: " + num2);
+        Integer num2 = Integer.valueOf(num);
+        //ou
+        Integer num3 = num;
+        System.out.println("Wrapper: " + num2);
+        System.out.println("Wrapper exemplo 2: " + num3);
 
     }
 }
