@@ -12,7 +12,7 @@ import javaapplication1.domain.Cliente;
 
 public class ClienteMapDAO implements IClienteDAO {
 
-   private Map<Long, Cliente> map;
+   private Map<String, Cliente> map;
     
     public ClienteMapDAO() {
         map = new TreeMap<>();
@@ -29,7 +29,7 @@ public class ClienteMapDAO implements IClienteDAO {
     }
 
     @Override
-    public void excluir(Long cpf) {
+    public void excluir(String cpf) {
         Cliente clienteCadastrado = map.get(cpf);
         map.remove(clienteCadastrado.getCpf(), clienteCadastrado);
     }
@@ -46,7 +46,7 @@ public class ClienteMapDAO implements IClienteDAO {
     }
 
     @Override
-    public Cliente consultar(Long cpf) {
+    public Cliente consultar(String cpf) {
         return this.map.get(cpf);
     }
     

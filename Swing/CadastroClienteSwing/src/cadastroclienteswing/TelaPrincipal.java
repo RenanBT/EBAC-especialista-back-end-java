@@ -92,6 +92,11 @@ public class TelaPrincipal extends javax.swing.JFrame {
         lblCidade.setText("Cidade:");
 
         btnLimpar.setText("Limpar");
+        btnLimpar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLimparActionPerformed(evt);
+            }
+        });
 
         btnExcluir.setText("Excluir");
         btnExcluir.addActionListener(new java.awt.event.ActionListener() {
@@ -101,6 +106,11 @@ public class TelaPrincipal extends javax.swing.JFrame {
         });
 
         btnAtualizar.setText("Atualizar");
+        btnAtualizar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAtualizarActionPerformed(evt);
+            }
+        });
 
         btnSalvar.setText("Salvar");
         btnSalvar.addActionListener(new java.awt.event.ActionListener() {
@@ -141,6 +151,11 @@ public class TelaPrincipal extends javax.swing.JFrame {
         });
 
         jMenuItem1.setText("Sair");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
         jMenuSair.add(jMenuItem1);
 
         jMenuBar1.add(jMenuSair);
@@ -258,36 +273,52 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
     private void btnSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalvarActionPerformed
         // TODO add your handling code here:
-        String nome = txtNome.getText();
-        String cpf = txtCPF.getText();
         
-        if (!isCamposValidos(nome, cpf)){
-            JOptionPane.showMessageDialog(null, "Existem campos a serem preenchidos ", "ATENÇÃO",JOptionPane.INFORMATION_MESSAGE);
-            
-        }
-        
-        Cliente cliente = new Cliente(nome, cpf, cpf, null, cpf, null, null);
-        Boolean isCadastrado = this.clienteDAO.cadastrar(cliente);
+        boolean isCadastrado = salvar();
                 
         if (isCadastrado){
-            modelo.addRow(new Object[]{cliente.getNome(), cliente.getCpf()});
-            limparCampos();
             
         }else{
             JOptionPane.showMessageDialog(null, "Clienta já cadastrado", "ATENÇÃO", JOptionPane.INFORMATION_MESSAGE);
         }
                 
     }//GEN-LAST:event_btnSalvarActionPerformed
+    
+    private boolean salvar(){
+        
+        String nome = txtNome.getText();
+        String cpf = txtCPF.getText();
+        String end = null;
+        Integer numero = null;
+        String cidade = null;
+        String estado = null;
+        Long tel = null;
+        if (!isCamposValidos(nome, cpf)){
+            JOptionPane.showMessageDialog(null, "Existem campos a serem preenchidos ", "ATENÇÃO",JOptionPane.INFORMATION_MESSAGE);
+            
+        }
+        
+       
+        Cliente cliente = new Cliente(nome, cpf, tel, end, numero, cidade, estado);
+        
+        boolean isCadastrado = this.clienteDAO.cadastrar(cliente);
+        if (isCadastrado){
+            modelo.addRow(new Object[]{cliente.getNome(), cliente.getCpf()});
+            limparCampos();
+        }
+    return isCadastrado;    
+    }
 
+    
     private void tabelaClientesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tabelaClientesMouseClicked
         int linhaSelecionada = tabelaClientes.getSelectedRow();
         
-        Long cpf = (Long) tabelaClientes.getValueAt(linhaSelecionada, 1);
+        String cpf = tabelaClientes.getValueAt(linhaSelecionada, 1).toString();
         
         Cliente cliente = this.clienteDAO.consultar(cpf);
         
         txtNome.setText(cliente.getNome());
-        txtCPF.setText(cliente.getCpf().toString());
+        txtCPF.setText(cliente.getCpf());
         
     }//GEN-LAST:event_tabelaClientesMouseClicked
 
@@ -301,7 +332,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
                     JOptionPane.YES_NO_OPTION,
                     JOptionPane.QUESTION_MESSAGE);
             if(result == JOptionPane.YES_OPTION){
-                 Long cpf = (Long) tabelaClientes.getValueAt(linhaSelecionada, 1); 
+                 String cpf = (String) tabelaClientes.getValueAt(linhaSelecionada, 1); 
                  this.clienteDAO.excluir(cpf);
                  modelo.removeRow(linhaSelecionada);
                  
@@ -320,6 +351,53 @@ public class TelaPrincipal extends javax.swing.JFrame {
     private void txtCPFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCPFActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtCPFActionPerformed
+
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        int result = JOptionPane.showConfirmDialog(this,"Deseja sair da aplicação?", "Sair",
+                    JOptionPane.YES_NO_OPTION,
+                    JOptionPane.QUESTION_MESSAGE);
+            if(result == JOptionPane.YES_OPTION){
+                System.exit(0);
+            }
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
+
+    private void btnLimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimparActionPerformed
+        int linhaSelecionada = tabelaClientes.getSelectedRow();
+        
+        
+         if (linhaSelecionada >=0){
+            int result = JOptionPane.showConfirmDialog(this, "Deseja Limpar informações?", "CUIDADO",
+                    JOptionPane.YES_NO_OPTION,
+                    JOptionPane.QUESTION_MESSAGE);
+            if(result == JOptionPane.YES_OPTION){
+                 limparCampos();
+            }
+        } else{
+                JOptionPane.showMessageDialog(null, "Nenhum cliente selecionado.", "ERRO", JOptionPane.INFORMATION_MESSAGE);                
+       }
+        
+    }//GEN-LAST:event_btnLimparActionPerformed
+
+    private void btnAtualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAtualizarActionPerformed
+        int linhaSelecionada = tabelaClientes.getSelectedRow();
+        
+        if (linhaSelecionada >=0){
+            int result = JOptionPane.showConfirmDialog(this, "Deseja Atualizar dados?", "CUIDADO",
+                    JOptionPane.YES_NO_OPTION,
+                    JOptionPane.QUESTION_MESSAGE);
+            if(result == JOptionPane.YES_OPTION){
+                String cpf = (String) tabelaClientes.getValueAt(linhaSelecionada, 1);
+                this.clienteDAO.excluir(cpf);
+                 modelo.removeRow(linhaSelecionada);
+                 salvar();                
+                 
+                 JOptionPane.showMessageDialog(null, "Cadastro atualizado com sucesso.", "Sucesso", 
+                         JOptionPane.INFORMATION_MESSAGE);               
+            }
+        } else{
+                JOptionPane.showMessageDialog(null, "Nenhum cliente selecionado.", "ERRO", JOptionPane.INFORMATION_MESSAGE);                
+       }
+    }//GEN-LAST:event_btnAtualizarActionPerformed
 
     /**
      * @param args the command line arguments

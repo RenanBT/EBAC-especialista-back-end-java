@@ -13,14 +13,14 @@ import java.util.Objects;
 public class Cliente {
 
     private String nome;
-    private Long cpf;
+    private String cpf;
     private Long tel;
     private String end;
     private Integer numero;
     private String cidade;
     private String estado;
 
-    public Cliente (String nome, Long cpf, Long tel, String end, Integer numero, String cidade, String estado){
+    public Cliente (String nome, String cpf, Long tel, String end, Integer numero, String cidade, String estado){
         this.nome = nome;
         this.cpf = cpf;
         this.tel = tel;
@@ -30,8 +30,7 @@ public class Cliente {
         this.estado = estado;
     }
 
-    public Cliente(String dadosSeparado, String dadosSeparado1, String dadosSeparado2, String dadosSeparado3, String dadosSeparado4, String dadosSeparado5, String dadosSeparado6) {
-    }
+   
 
     public String getNome() {
         return nome;
@@ -41,11 +40,11 @@ public class Cliente {
         this.nome = nome;
     }
 
-    public Long getCpf() {
+    public String getCpf() {
         return cpf;
     }
 
-    public void setCpf(Long cpf) {
+    public void setCpf(String cpf) {
         this.cpf = cpf;
     }
 

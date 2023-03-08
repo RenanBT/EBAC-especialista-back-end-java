@@ -28,7 +28,7 @@ public class ClienteSetDAO implements IClienteDAO{
     }
 
     @Override
-    public void excluir(Long cpf) {
+    public void excluir(String cpf) {
         Cliente clienteEncontrato = null;
         for (Cliente cliente : this.set) {
             if (cliente.getCpf().equals(cpf)) {
@@ -60,7 +60,7 @@ public class ClienteSetDAO implements IClienteDAO{
     }
 
     @Override
-    public Cliente consultar(Long cpf) {
+    public Cliente consultar(String cpf) {
         for (Cliente clienteCadastrado : this.set) {
              if (clienteCadastrado.getCpf().equals(cpf)) {
                  return clienteCadastrado;

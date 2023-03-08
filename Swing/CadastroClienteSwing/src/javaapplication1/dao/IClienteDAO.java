@@ -16,9 +16,9 @@ public interface IClienteDAO {
     
  public Boolean cadastrar(Cliente cliente);
     
-    public void excluir(Long cpf);
+    public void excluir(String cpf);
     
     public void alterar(Cliente cliente);
     
-    public Cliente consultar(Long cpf);
+    public Cliente consultar(String cpf);
 }
