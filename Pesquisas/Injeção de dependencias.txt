@@ -1,0 +1,8 @@
+
+Injeção de dependências 
+
+Injeção de dependências é um padrão de projetos que tem como característica o desacoplamento do código, melhora a leitura e distribuição de responsabilidade das classes.
+Neste padrão de projetos, aplica-se uma técnica onde o objeto ou método estático fornece as dependências de um outro objeto evitando a necessidade de instanciar o mesmo, assim gerando uma inversão de controle.
+
+
+

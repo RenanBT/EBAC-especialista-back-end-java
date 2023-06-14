@@ -1,0 +1,13 @@
+
+
+Postgres SQL é um banco de dados relacional opensource amplamente utilizado no mercado de tecnologia da informação devido a grande estabilidade e boa performance. Postgres SQL tem como características:
+- Consultas complexas
+- Chaves estrangeiras
+- Gatilhos
+- Visões
+- Integridade transacional
+- Operadores;
+- Funções agregadas;
+- Métodos de indexação;
+Ainda suporta o PL/pgSQL que pode ser comparado ao PL/SQL da oracle,linguagem proucedural para bancos de dados que possibilitam a criação de funções computacionais complexas, como por exemplo ao invés de ser necessário esperar que uma query seja completada para processar uma próxima query, podemos enviar uma série de queryes para serem executadas paralelamente.
+Esta caratcterística aumenta considerevelmente a performance se comparado a aplicações que não utilizam este tipo de funções.

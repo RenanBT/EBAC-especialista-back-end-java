@@ -1,0 +1,62 @@
+produtos
+clientes 
+vendas ou NFs
+
+relacionamento entre elas
+
+inserções - cadastro de vendas
+SELECTS
+
+create index idx_pessoa_nome on table tb_pessoa(nome)
+
+
+create table tb_produtos(
+	cadastro serial,
+	descricao varchar (50),
+	preco decimal,
+	constraint pk_cadastro_produto primary key(cadastro)
+);
+
+
+create table tb_clientes(
+
+	ID serial,
+	nome varchar (50),
+	cpf bigint not null,
+	constraint pk_id_clientes primary key(id)
+);
+
+
+create table tb_vendas(
+
+	numero_venda serial,
+	nome_vendedor varchar (100),
+	concluido boolean,
+	id_cliente integer not null,
+	cadastro_produto integer not null,
+	constraint pk_numero_venda_vendas primary key(numero_venda),
+	constraint fk_id_cliente foreign key(id_cliente) references tb_clientes(id),
+	constraint fk_cadastro_produto foreign key(cadastro_produto) references produtos(cadastro)
+);
+
+
+
+insert into tb_produto ( descricao, preco)  values ('mouse', 30.99);
+insert into tb_produto ( descricao, preco)  values ('teclado', 49.99);
+insert into tb_produto ( descricao, preco)  values ('Monitor 22pol', 999.99);
+insert into tb_produto ( descricao, preco)  values ('cadeira escritorio', 799.99);
+insert into tb_produto ( descricao, preco)  values ('mouse pad', 19.99);
+
+
+
+insert into tb_clientes ( nome, cpf)  values ('Renan', 741258);
+insert into tb_clientes ( nome, cpf)  values ('Joao', 963258);
+insert into tb_clientes ( nome, cpf)  values ('Tais', 951753);
+insert into tb_clientes ( nome, cpf)  values ('Maria', 2589647);
+
+
+insert into tb_vendas ( nome_vendedor, concluido, id_cliente, cadastro_produto)  values ('Pedro', false,4,4);
+
+insert into tb_vendas ( nome_vendedor, concluido, id_cliente, cadastro_produto)  values ('Luisa', true,3,2);
+
+insert into tb_vendas ( nome_vendedor, concluido, id_cliente, cadastro_produto)  values ('Luisa', true, 1,3 );
