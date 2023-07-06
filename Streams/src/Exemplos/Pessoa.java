@@ -1,4 +1,4 @@
-package Streams_Mod22;
+package Exemplos;
 
 import java.util.List;
 
