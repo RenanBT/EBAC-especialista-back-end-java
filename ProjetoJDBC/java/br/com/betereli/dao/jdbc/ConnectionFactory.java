@@ -6,6 +6,7 @@ import java.sql.SQLException;
 
 public class ConnectionFactory {
 
+
         private static Connection connection;
 
         private ConnectionFactory(Connection connection) {
