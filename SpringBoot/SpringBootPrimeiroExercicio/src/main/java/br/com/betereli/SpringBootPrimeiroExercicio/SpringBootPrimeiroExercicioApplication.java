@@ -1,9 +1,7 @@
 package br.com.betereli.SpringBootPrimeiroExercicio;
 
 import br.com.betereli.domain.Cliente;
-import br.com.betereli.domain.Produto;
 import br.com.betereli.repository.IClienteRepository;
-import br.com.betereli.repository.IProdutoRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,7 +28,6 @@ public class SpringBootPrimeiroExercicioApplication implements CommandLineRunner
 	private IClienteRepository repository;
 
 
-
 	public static void main(String[] args) {
 		SpringApplication.run(SpringBootPrimeiroExercicioApplication.class, args);
 	}
@@ -39,8 +36,7 @@ public class SpringBootPrimeiroExercicioApplication implements CommandLineRunner
 	public void run(String... args) throws Exception {
 		log.info("StartApplication...");
 		Cliente cliente = createCliente();
-		Produto produto = createProduto();
-		repository.saveAll(cliente, produto);
+		repository.save(cliente);
 
 	}
 
@@ -57,13 +53,4 @@ public class SpringBootPrimeiroExercicioApplication implements CommandLineRunner
 				.build();
 	}
 
-	private Produto createProduto(){
-		return Produto.builder()
-				.id(1L)
-				.nome("Parafuso M6")
-				.descricao("Parafuso aco inox rosca fina M6")
-				.preco(4.99d)
-				.estoque(521)
-				.build();
-	}
 }

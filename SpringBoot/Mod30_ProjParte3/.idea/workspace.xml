@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="8e315ebb-31c3-4d58-828f-4a5c2e2e9fb3" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../ExercicioMod/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ExercicioMod/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ExercicioMod/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ExercicioMod/ExercicioMod.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Modulo 15/PadroesDeProjetos" beforeDir="false" afterPath="$PROJECT_DIR$/../../Modulo 15/PadroesDeProjetos" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PrimeiroProjeto" beforeDir="false" afterPath="$PROJECT_DIR$/../../PrimeiroProjeto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mod30_ProjParte3.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/anotacao/ColunaTabela.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/anotacao/Tabela.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/anotacao/TipoChave.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/betereli/dao/main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/betereli/exceptions/DAOException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/betereli/exceptions/MaisDeUmRegistroException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/betereli/exceptions/TableException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/betereli/services/ClienteService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/betereli/services/IClienteService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/betereli/services/IProdutoService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/betereli/services/ProdutoService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/betereli/services/generic/GenericService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/betereli/services/generic/IGenericService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Mod33/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Mod33/.idea/jpa-buddy.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Mod33/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Mod33/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Mod33/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Mod33/Mod33.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringBootOne/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringBootOne/.idea/jpa-buddy.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringBootOne/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringBootOne/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringBootOne/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringBootOne/SpringBootOne.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringBootPrimeiroExercicio/src/main/java/br/com/betereli/SpringBootPrimeiroExercicio/SpringBootPrimeiroExercicioApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SpringBootPrimeiroExercicio/src/main/java/br/com/betereli/SpringBootPrimeiroExercicio/SpringBootPrimeiroExercicioApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringBootPrimeiroExercicio/src/main/java/br/com/betereli/repository/IClienteRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SpringBootPrimeiroExercicio/src/main/java/br/com/betereli/repository/IClienteRepository.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2TX0NyvwvEJ2qBhdWP530NCKld6" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/EBAC/Mod33&quot;
+  }
+}</component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8e315ebb-31c3-4d58-828f-4a5c2e2e9fb3" name="Changes" comment="" />
+      <created>1691174084306</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1691174084306</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
