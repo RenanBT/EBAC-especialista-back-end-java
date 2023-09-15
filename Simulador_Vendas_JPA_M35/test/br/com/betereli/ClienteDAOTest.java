@@ -7,16 +7,37 @@ import main.java.br.com.betereli.exceptions.DAOException;
 import main.java.br.com.betereli.exceptions.MaisDeUmRegistroException;
 import main.java.br.com.betereli.exceptions.TableException;
 import main.java.br.com.betereli.exceptions.TipoChaveNaoEncontradaException;
+import org.junit.After;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class ClienteDaoTest {
+import java.util.Collection;
+import java.util.Random;
 
-    private IClienteDAO clienteDAO;
+import static org.junit.Assert.assertTrue;
 
-    public ClienteDaoTest(){
+public class ClienteDAOTest {
+
+    private IClienteDAO<Cliente> clienteDAO;
+    private Random rd;
+
+    public ClienteDAOTest(){
         this.clienteDAO = new ClienteDAO();
+        rd = new Random();
 
+    }
+
+    @After
+    public void end() throws DAOException {
+        Collection<Cliente> list = clienteDAO.buscarTodos();
+        list.forEach(cli -> {
+            try {
+                clienteDAO.excluir(cli);
+            } catch (DAOException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
+        });
     }
 
     @Test
@@ -78,7 +99,33 @@ public class ClienteDaoTest {
         clienteConsultado = clienteDAO.consultar(clienteAlterado.getId());
         Assert.assertNull(clienteConsultado);
     }
+    @Test
+    public void buscarTodos() throws TipoChaveNaoEncontradaException, DAOException {
+        Cliente cliente = criarCliente();
+        Cliente retorno = clienteDAO.cadastrar(cliente);
+        Assert.assertNotNull(retorno);
 
+        Cliente cliente1 = criarCliente();
+        Cliente retorno1 = clienteDAO.cadastrar(cliente1);
+        Assert.assertNotNull(retorno1);
+
+        Collection<Cliente> list = clienteDAO.buscarTodos();
+        assertTrue(list != null);
+        assertTrue(list.size() == 2);
+
+        list.forEach(cli -> {
+            try {
+                clienteDAO.excluir(cli);
+            } catch (DAOException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
+        });
+
+        Collection<Cliente> list1 = clienteDAO.buscarTodos();
+        assertTrue(list1 != null);
+        assertTrue(list1.size() == 0);
+    }
 
     private Cliente criarCliente() {
         Cliente cliente = new Cliente();

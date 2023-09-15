@@ -25,6 +25,16 @@ import java.math.BigDecimal;
         @Column(name = "valor", nullable = false)
         private BigDecimal valor;
 
+        @Override
+        public Long getId() {
+            return id;
+        }
+
+        @Override
+        public void setId(Long id) {
+            this.id = id;
+        }
+
         public String getCodigo() {
             return codigo;
         }
@@ -56,15 +66,7 @@ import java.math.BigDecimal;
         public void setValor(BigDecimal valor) {
             this.valor = valor;
         }
-
-        public Long getId() {
-            return id;
-        }
-
-        public void setId(Long id) {
-            this.id = id;
-        }
-
     }
+
 
 
